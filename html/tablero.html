@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monedita</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tablero.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <div class="header">
+      <img src="../img/avatar.png" alt="Avatar" class="avatar" />
+      <div class="notif-bell">
+        <i class="iconoir-bell"></i>
+        <span class="badge">5</span>
+      </div>
+    </div>
+
+    <div class="scroll-area">
+
+      <div class="hero">
+        <p class="hero-label">Yo tengo</p>
+        <h1 class="hero-amount">Bs.- 10,000</h1>
+        <p class="hero-sub">en mis metas totales</p>
+      </div>
+
+      <div class="content">
+
+        <div class="rewards-banner">
+          <div class="rewards-icon">🎁</div>
+          <div class="rewards-text">
+            <p class="rewards-title">Gana Recompensas Excepcionales</p>
+            <p class="rewards-desc">Logra tu objetivo actual o agrega nuevos objetivos</p>
+          </div>
+        </div>
+
+        <div class="goals-header">
+          <h2 class="goals-title">Mis Metas</h2>
+          <p class="goals-sub">Gana recompensas agregando nuevas metas</p>
+        </div>
+
+        <button class="add-goal-btn" id="openModalBtn">Agregar mi nueva meta</button>
+
+        <!-- CARD 1 -->
+        <div class="goal-card card-pink">
+          <div class="card-top">
+            <img src="../img/cerdo.png" alt="Piggy" class="piggy-img" />
+            <div class="card-info">
+              <div class="card-title-row">
+                <span class="card-name">Badminton Kit</span>
+                <i class="iconoir-more-vert card-menu"></i>
+              </div>
+              <p class="card-amount">Bs.- 3200 / <span>Bs.- 5400</span> <span class="card-left">(Falta 65%)</span></p>
+              <div class="progress-bar"><div class="progress-fill fill-pink" style="width:35%"></div></div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-white">Añadir Dinero</button>
+            <button class="btn-ghost">Romper la alcancia</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="goal-card card-lavender">
+          <div class="card-top">
+            <img src="../img/cerdo.png" alt="Piggy" class="piggy-img" />
+            <div class="card-info">
+              <div class="card-title-row">
+                <span class="card-name">Badminton Kit</span>
+                <i class="iconoir-more-vert card-menu"></i>
+              </div>
+              <p class="card-amount">Bs.- 6,000 / <span>Bs.- 6,000</span> <span class="card-left">(Completado)</span></p>
+              <div class="progress-bar"><div class="progress-fill fill-purple" style="width:100%"></div></div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-white">Añadir Dinero</button>
+            <button class="btn-white">Romper la alcancia</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="goal-card card-mint">
+          <div class="card-top">
+            <img src="../img/cerdo.png" alt="Piggy" class="piggy-img" />
+            <div class="card-info">
+              <div class="card-title-row">
+                <span class="card-name">Badminton Kit</span>
+                <i class="iconoir-more-vert card-menu"></i>
+              </div>
+              <p class="card-amount">Bs.- 5,200 / <span>Bs.- 6,000</span> <span class="card-left">(Falta 10%)</span></p>
+              <div class="progress-bar"><div class="progress-fill fill-green" style="width:90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="fab" id="fabBtn">
+      <i class="iconoir-plus"></i>
+    </button>
+
+    <nav class="bottom-nav">
+      <div class="nav-item">
+        <i class="iconoir-wallet"></i>
+        <span>Billetera</span>
+      </div>
+      <div class="nav-item">
+        <i class="iconoir-piggy-bank"></i>
+        <span>Metas</span>
+      </div>
+      <div class="nav-spacer active"></div>
+      <div class="nav-item">
+        <i class="iconoir-trophy"></i>
+        <span>Recompensas</span>
+      </div>
+      <div class="nav-item">
+        <i class="iconoir-list"></i>
+        <span>Actividades</span>
+      </div>
+    </nav>
+
+  </div>
+
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="iconoir-piggy-bank"></i> Añadir Nueva Meta
+        </h3>
+        <button class="modal-close" id="closeModalBtn">
+          <i class="iconoir-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="goalName">
+            <i class="iconoir-edit-pencil"></i> Nombre de la Meta
+          </label>
+          <input type="text" id="goalName" placeholder="e.g. Badminton Kit" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="goalAmount">
+              <i class="iconoir-coins"></i> Monto Objetivo (Bs.)
+            </label>
+            <input type="number" id="goalAmount" placeholder="e.g. 5000" />
+          </div>
+          <div class="form-group">
+            <label for="goalSaved">
+              <i class="iconoir-piggy-bank"></i> Dinero Añadido (Bs.)
+            </label>
+            <input type="number" id="goalSaved" placeholder="e.g. 1000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="goalDate">
+            <i class="iconoir-calendar"></i> Fecha Objetivo
+          </label>
+          <input type="date" id="goalDate" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" id="cancelModalBtn">
+          <i class="iconoir-xmark"></i> Cancelar
+        </button>
+        <button class="btn-save" id="saveModalBtn">
+          <i class="iconoir-check"></i> Guardar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/tablero.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monedita</title>
+  <link rel="stylesheet" href="css/intro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- STEP 1 -->
+  <div class="slide active" id="slide-1">
+    <div class="slide-inner">
+      <div class="top-bar">
+        <div></div>
+        <button class="skip-btn" onclick="goToSlide(3)">Saltar</button>
+      </div>
+      <div class="image-area">
+        <div class="image-glow"></div>
+        <img src="img/billetera.png" alt="Billetera digital" class="hero-img" />
+      </div>
+      <div class="content">
+        <h1 class="title">Administra tus<br>Ingresos y Egresos<br><br> <span class="highlight">Fácil</span></h1>
+        <p class="desc">Comienza a gestionar tus ingresos y egresos de forma sencilla y eficiente. Monedita te ayuda a mantener un control total sobre tu dinero.</p>
+      </div>
+      <div class="bottom-bar">
+        <div class="dots">
+          <span class="dot active-dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next-btn" onclick="goToSlide(2)">Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="slide" id="slide-2">
+    <div class="slide-inner">
+      <div class="top-bar">
+        <div></div>
+        <button class="skip-btn" onclick="goToSlide(3)">Saltar</button>
+      </div>
+      <div class="image-area">
+        <div class="image-glow"></div>
+        <img src="img/alcancia.png" alt="Alcancía de ahorros" class="hero-img" />
+      </div>
+      <div class="content">
+        <h1 class="title">Haz crecer tus<br>Ahorros con<br><br><span class="highlight">Confianza</span></h1>
+        <p class="desc">Guarda y multiplica tu portafolio de ahorros de forma segura. Rastrea tus ganancias, establece metas de ahorro y observa cómo crecen tus ingresos.</p>
+      </div>
+      <div class="bottom-bar">
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot active-dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next-btn" onclick="goToSlide(3)">Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: BIENVENIDA -->
+  <div class="slide" id="slide-3">
+    <div class="slide-inner welcome-slide-inner">
+      <div class="welcome-glow"></div>
+      <div class="welcome-icon">
+        <img src="img/logo.png" alt="" width="150px">
+      </div>
+      <h1 class="welcome-title">Bienvenido<span class="welcome-dot"> .</span></h1>
+      <p class="welcome-sub">Tu camino de ahorros comienza aquí.<br>Administra, ahorra y haz crecer tus ingresos.</p>
+      <div class="stars">
+        <span>✦</span><span>✦</span><span>✦</span>
+      </div>
+      <a href="html/tablero.html" class="ingresar-btn">Ingresar</a>
+      <div class="dots welcome-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/intro.js"></script>
+</body>
+</html>
