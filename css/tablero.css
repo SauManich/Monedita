@@ -21,10 +21,15 @@
   --bg-main:      #e8d5f0;
 }
 
+/* ============================================================
+   CAMBIO 1 — línea agregada: -webkit-tap-highlight-color
+   Elimina el destello azul al tocar botones/links en móvil
+   ============================================================ */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -96,6 +101,7 @@ html, body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: var(--nav-h);
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -317,9 +323,12 @@ html, body {
   cursor: pointer;
 }
 
-/* ===== FAB — centrado sobre el hueco del nav ===== */
+/* ============================================================
+   CAMBIO 2 — FAB: position absolute → position fixed
+   Para que siempre sea visible en móvil sobre el nav
+   ============================================================ */
 .fab {
-  position: absolute;
+  position: fixed;
   bottom: calc(var(--nav-h) - 26px);
   left: 50%;
   transform: translateX(-50%);
@@ -345,15 +354,21 @@ html, body {
 
 .fab i { font-size: 22px; }
 
-/* ===== BOTTOM NAV — 5 slots, hueco en el centro ===== */
+/* ============================================================
+   CAMBIO 2 — BOTTOM NAV: position relative → position fixed
+   Para que siempre sea visible en móvil al hacer scroll
+   ============================================================ */
 .bottom-nav {
-  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: var(--nav-h);
   background: var(--jacarta);
   display: flex;
   align-items: center;
   padding: 0;
-  position: relative;
+  z-index: 50;
 }
 
 .nav-item {
