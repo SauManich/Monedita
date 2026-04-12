@@ -101,7 +101,7 @@ html, body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: calc(var(--nav-h) + 24px);
+  padding-bottom: var(--nav-h);
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -575,10 +575,84 @@ html, body {
   transform: translateY(-1px);
 }
 
+/* ===== MODAL PEQUEÑO ===== */
+.modal-sm {
+  max-width: 340px;
+}
+
+/* ===== MODAL HEADER DANGER (eliminar) ===== */
+.modal-header-danger {
+  background: var(--brown-choco);
+}
+
+/* ===== MODAL BODY CENTRADO ===== */
+.modal-body-center {
+  text-align: center;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.delete-msg {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--old-lavender);
+}
+
+.delete-goal-name {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--jacarta);
+}
+
+.modal-goal-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--jacarta);
+  margin-bottom: 4px;
+}
+
+/* ===== BOTÓN DANGER ===== */
+.btn-danger {
+  flex: 1;
+  padding: 12px;
+  background: var(--brown-choco);
+  border: none;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-danger:hover {
+  background: #3a0f28;
+  transform: translateY(-1px);
+}
+
+/* ===== ICONO BASURERO EN CARD ===== */
+.card-delete {
+  font-size: 17px;
+  color: var(--old-lavender);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 2px 4px;
+}
+
+.card-delete:hover {
+  color: var(--brown-choco);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
   .hero-amount { font-size: 32px; }
   .form-row { flex-direction: column; gap: 16px; }
   .modal { width: 95%; }
+  .modal-sm { width: 88%; }
   .content { padding: 0 14px 16px; }
 }

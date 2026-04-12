@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monedita — Metas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/meta.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <div class="header">
+      <img src="../img/avatar.png" alt="Avatar" class="avatar" />
+      <div class="notif-bell">
+        <i class="iconoir-bell"></i>
+        <span class="badge">0</span>
+      </div>
+    </div>
+
+    <div class="scroll-area">
+
+      <div class="hero">
+        <p class="hero-label">Total retirado</p>
+        <h1 class="hero-amount" id="heroTotal">Bs.- 0</h1>
+        <p class="hero-sub">de alcancías rotas</p>
+      </div>
+
+      <div class="content">
+
+        <div class="goals-header">
+          <h2 class="goals-title">Historial de Metas</h2>
+          <p class="goals-sub">Alcancías que rompiste y retiraste</p>
+        </div>
+
+        <!-- Cards dinámicas -->
+        <div id="brokenContainer">
+          <div class="empty-state" id="emptyState">
+            <i class="iconoir-piggy-bank empty-icon"></i>
+            <p>Aún no has roto ninguna alcancía</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="nav-item" onclick="location.href='tablero.html'">
+        <i class="iconoir-wallet"></i>
+        <span>Billetera</span>
+      </div>
+      <div class="nav-item active">
+        <i class="iconoir-piggy-bank"></i>
+        <span>Metas</span>
+      </div>
+      <!-- <div class="nav-spacer"></div> -->
+      <div class="nav-item">
+        <i class="iconoir-trophy"></i>
+        <span>Recompensas</span>
+      </div>
+      <div class="nav-item">
+        <i class="iconoir-list"></i>
+        <span>Actividades</span>
+      </div>
+    </nav>
+
+  </div>
+
+  <script src="../js/meta.js"></script>
+</body>
+</html>
